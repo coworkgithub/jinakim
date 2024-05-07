@@ -25,3 +25,6 @@ export default function FavoriteItem({favoriteListItem}:Props) {
     </div>
   )
 }
+
+
+//변경//
