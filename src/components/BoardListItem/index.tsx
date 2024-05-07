@@ -39,6 +39,15 @@ export default function BoardItem( {boardListItem}:Props ) { // Props 객체의 
                     <div className = 'board-list-item-nickname'>{writerNickname}</div>
                     <div className = 'board-list-item-write-date'>{writeDatetime}</div>
                 </div>
+                <div className = 'board-list-item-write-box'>
+                    <div className = 'board-list-item-nickname'>{writerNickname}</div>
+                    <div className = 'board-list-item-write-date'>{writeDatetime}</div>
+                </div>
+
+                <div className = 'board-list-item-write-box'>
+                    <div className = 'board-list-item-nickname'>{writerNickname}</div>
+                    <div className = 'board-list-item-write-date'>{writeDatetime}</div>
+                </div>
             </div>
             <div className = 'board-list-item-middle'>
                 <div className = 'board-list-item-title'>{title}</div>
