@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button Click</title>
+    <style>
+        /* 추가한 CSS 코드 */
+        .black-button {
+            border-radius: 46px;
+            width: 120px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 1);
+            color: rgba(255, 255, 255, 1);
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .black-button:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        /* 버튼이 클릭될 때 효과를 주려면 필요한 코드 */
+        .black-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+<!--  버튼 및 클릭 이벤트 처리 -->
+<button id="redirectButton" class="black-button">캘린더</button>
+
+<script>
+    // 버튼 이벤트 처리
+    document.getElementById("redirectButton").addEventListener("click", function() {
+        // 버튼을 클릭하면 지정된 URL로 이동
+        window.location.href = "http://127.0.0.1:5500/board-front/DatePicker/index.html";
+    });
+</script>
+
+<!--  버튼 및 클릭 이벤트 처리 -->
+<button id="stopwatchButton" class="black-button">스탑워치</button>
+
+<script>
+    //  버튼 클릭 이벤트 처리
+    document.getElementById("stopwatchButton").addEventListener("click", function() {
+        //  버튼을 클릭하면 지정된 URL로 이동
+        window.location.href = "http://127.0.0.1:5500/board-front/Stopwatch/index.html";
+    });
+</script>
+
+</body>
+</html>
+
