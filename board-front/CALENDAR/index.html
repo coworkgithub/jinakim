@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.11/index.global.min.js'></script>
+    <script>
+    
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        let popup = document.querySelector('dialog');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth', 
+        googleCalendarApiKey:
+        'AIzaSyCfJ6naJRHeMEm2KWa_-6E8T_CF3SzNkUc',
+        events: {
+        googleCalendarId: 'd824c196f363b3599dc0a09aea4fcc16f107d74a23ed9e5d7d2420660f840007@group.calendar.google.com'
+        
+        },
+        eventClick: function(info) {
+        info.jsEvent.preventDefault(); // don't let the browser navigate
+
+        // if (info.event.url) {
+        //window.open(info.event.url);-- URL 연결
+        // }
+
+           
+            
+            popup.querySelector('div').innerHTML = `
+            <h3>${info.event.title}</h3>
+            <div>${info.event.extendedProps.description}</div>
+        `;
+        popup.setAttribute('open','open');
+        }
+
+        });
+        calendar.render();
+        popup.querySelector('button').addEventListener('click',()=>{
+            popup.removeAttribute('open');
+        });
+      });
+
+    
+
+    </script>
+    <style>
+      dialog {
+    position: fixed;
+    width: 300px;
+    margin: 0;
+    z-index: 100;
+    padding: 30px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    border: none;
+    border-radius: 10px;
+}
+ /* 버튼 스타일 */
+ dialog button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(170%);
+  }
+
+  /* 버튼 호버 효과 */
+  dialog button:hover {
+    background-color: #45a049;
+    
+  }
+
+  /* 버튼 포커스 효과 */
+  dialog button:focus {
+    outline: none;
+  }
+
+    </style>
+  </head>
+  <body>
+    <div id='calendar'></div>
+    
+    <dialog >
+        <div>제목 테스트</div>
+        <button>닫기</button>
+    </dialog>
+  </body>
+</html>

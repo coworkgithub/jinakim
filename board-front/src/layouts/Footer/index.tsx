@@ -25,7 +25,7 @@ export default function Footer() {
                     <div className='icon-box'>
                         <div className='icon logo-light-icon'></div>
                     </div>
-                    <div className='footer-logo-text'>{'Hoons Board'}</div>
+                    <div className='footer-logo-text'>{'열매'}</div>
                 </div>
                 <div className='footer-link-box'>
                     <div className='footer-email-link'>{'cjsxogns@naver.com'}</div>
@@ -38,7 +38,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='footer-bottom'>
-                <div className='footer-copyright'>{'Copyright 2022 asdf'}</div>
+                <div className='footer-copyright'>{'Copyright 2022 열매'}</div>
             </div>
         </div>
     </div>
